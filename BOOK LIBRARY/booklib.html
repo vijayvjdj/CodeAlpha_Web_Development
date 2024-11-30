@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library</title>
+    <link rel="stylesheet" href="booklib.css">
+</head>
+<body>
+    <header class="header">
+        <h1>My Book Library</h1>
+    </header>
+
+    <section class="search-section">
+        <input type="text" id="search-bar" placeholder="Search books by title or author..." oninput="filterBooks()">
+    </section>
+
+    <section class="categories">
+        <h2>Categories</h2>
+        <ul>
+            <li onclick="filterCategory('All')">All</li>
+            <li onclick="filterCategory('Fiction')">Fiction</li>
+            <li onclick="filterCategory('Non-Fiction')">Non-Fiction</li>
+            <li onclick="filterCategory('Science')">Science</li>
+        </ul>
+    </section>
+
+    <section class="book-list">
+        <h2>Books</h2>
+        <div id="books">
+            <div class="book" data-category="Fiction">
+                <h3>The Great Gatsby</h3>
+                <p>Author: F. Scott Fitzgerald</p>
+                <button onclick="borrowBook('The Great Gatsby')">Borrow</button>
+            </div>
+            <div class="book" data-category="Fiction">
+                <h3>Pride and Prejudice</h3>
+                <p>Author: Jane Austen</p>
+                <button onclick="borrowBook('Pride and Prejudice')">Borrow</button>
+            </div>
+            <div class="book" data-category="Fiction">
+                <h3>To Kill a Mockingbird</h3>
+                <p>Author: Harper Lee</p>
+                <button onclick="borrowBook('To Kill a Mockingbird')">Borrow</button>
+            </div>
+            <div class="book" data-category="Non-Fiction">
+                <h3>Educated</h3>
+                <p>Author: Tara Westover</p>
+                <button onclick="borrowBook('Educated')">Borrow</button>
+            </div>
+            <div class="book" data-category="Non-Fiction">
+                <h3>The Immortal Life of Henrietta Lacks</h3>
+                <p>Author: Rebecca Skloot</p>
+                <button onclick="borrowBook('The Immortal Life of Henrietta Lacks')">Borrow</button>
+            </div>
+            <div class="book" data-category="Non-Fiction">
+                <h3>The Wright Brothers</h3>
+                <p>Author: David McCullough</p>
+                <button onclick="borrowBook('The Wright Brothers')">Borrow</button>
+            </div>
+            <div class="book" data-category="Science">
+                <h3>A Brief History of Time</h3>
+                <p>Author: Stephen Hawking</p>
+                <button onclick="borrowBook('A Brief History of Time')">Borrow</button>
+            </div>
+            <div class="book" data-category="Science">
+                <h3>The Selfish Gene</h3>
+                <p>Author: Richard Dawkins</p>
+                <button onclick="borrowBook('The Selfish Gene')">Borrow</button>
+            </div>
+            <div class="book" data-category="Science">
+                <h3>Astrophysics for People in a Hurry</h3>
+                <p>Author: Neil deGrasse Tyson</p>
+                <button onclick="borrowBook('Astrophysics for People in a Hurry')">Borrow</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="borrowing-history">
+        <h2>Borrowing History</h2>
+        <ul id="history">
+        </ul>
+    </section>
+
+    <script src="booklib.js"></script>
+</body>
+</html>
